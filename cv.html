@@ -1,0 +1,590 @@
+<!--
+  _________                                     .__     
+ /   _____/ ______   _____    _______    ______ |  |__  
+ \_____  \  \____ \  \__  \   \_  __ \  /  ___/ |  |  \ 
+ /        \ |  |_> >  / __ \_  |  | \/  \___ \  |   Y  \
+/_______  / |   __/  (____  /  |__|    /____  > |___|  /
+        \/  |__|          \/                \/       \/ 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="cv.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width" , initial scale=1.0>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="description" content="Hi I'm Sparsh Hurkat... A 19 year old Electronics Engineering Student Based in Mumbai.
+                I am a programmer with good knowledge of front-end techniques. I am an allround web developer.">
+    <meta name="keywords" content="Sparsh, Hurkat, Student, Intern, Resume, CV">
+    <meta name="author" content="Sparsh Hurkat">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="cv.js"></script>
+    <title>CV - Sparsh Hurkat</title>
+</head>
+
+<script type="text/javascript">
+    function main() {
+        const log = document.getElementById('instructions');
+        document.addEventListener('keypress', logKey);
+        document.addEventListener('keydown', logKey);
+        document.addEventListener('click', logKey);
+        logKey(e);
+    }
+
+    function logKey(e) {
+        var mq = window.matchMedia("(max-width: 480px)");
+        document.getElementById("instructions").style.display = "none";
+        document.getElementById("arrows").style.display = "inline-block";
+        if (mq.matches) {
+            document.getElementById("arrows").style.display = "none";
+        }
+    }
+
+
+    document.onkeydown = function (event) {
+        switch (event.keyCode) {
+            case 13:        //enter
+                start();
+                break;
+            case 37:        //left
+                plusSlides(-1);
+                arrowkeys(1);
+                break;
+            case 38:        //up
+                moreinfo();
+                arrowkeys(0);
+                break;
+            case 39:        //right
+                plusSlides(1);
+                arrowkeys(3);
+                break;
+            case 40:        //down
+                about();
+                arrowkeys(2);
+                break;
+        }
+    };
+
+</script>
+
+<body onload="showSlides()" class="body">
+    <div id="upperbox">
+        <div class="ex1" id="stext1">
+            Hi, I'm</div>
+        <div class="ex1" id="name">
+            SPARSH HURKAT
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="textyle.min.js"></script>
+        <script>
+            $(window).on('load', function () {
+                //simple use
+                $('.ex1').textyle();
+                //you can select options or add callback
+                $('.ex2').textyle({
+                    duration: 200,
+                    delay: 50,
+                    easing: 'swing',
+                    callback: function () {
+                        $(this).css({
+                            color: 'black',
+                            transition: '0.5s',
+                        });
+                    }
+                });
+            });
+        </script>
+    </div>
+    <button class="ex1" id="start" onclick="start()">Click!</button>
+    <div id="lowerbox">
+        <div class="ex2" id="andthis">
+            WELCOME TO MY INTERACTIVE CV<br>
+        </div>
+    </div>
+
+
+
+    <!--ABOUT-->
+    <div id="aboutme" class="fadedown">
+        <div style="display: inline-block;">
+            <img src="me1.png" id="me" alt="Sparsh Hurkat">
+        </div>
+        <div id="abttext">
+            <i id="mobile" style="position:fixed;top:1%;left: 49%;" onclick="moreinfo()" class="fa fa-chevron-up"></i>
+            <div id="halfwidth">
+                <h3 style="margin-bottom: 5px;font-family: 'Nexa_Free_Bold';">I AM SPARSH HURKAT</h3>
+                A 19 year old Electronics Engineering Student Based in Mumbai.
+                I am a programmer with good knowledge of front-end techniques. I am an allround web developer. I love creativity
+                I also stand for quality. I love 
+            </div>
+            <div id="fullwidth"></div>spending time on fixing little details and optimizing web apps. Also I
+            like working in a team, you'll learn faster and much more.<br>
+        </div>
+        <div id="findme">
+            <h4 style="font-size:17px;margin-bottom: 5px;font-family: 'Nexa_Free_Bold';">FIND ME ON :</h3>
+                <div style="line-height: 40px;">
+                    <i style="font-size: 200%;cursor: pointer;" class="fab fa-instagram"
+                        onclick="window.open('','_new').location.href='https://www.instagram.com/sparsh.hurkat/';"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i style="font-size: 200%;cursor: pointer;" class="fab fa-twitter"
+                        onclick="window.open('','_new').location.href='https://twitter.com/@SparshHurkat';"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i style="font-size: 200%;cursor: pointer;" class="fab fa-linkedin"
+                        onclick="window.open('','_new').location.href='https://www.linkedin.com/in/sparsh-hurkat/';"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i style="font-size: 200%;cursor: pointer;" class="fab fa-hackerrank"
+                        onclick="window.open('','_new').location.href='https://www.hackerrank.com/hurkatsparsh?hr_r=1';"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i style="font-size: 200%;cursor: pointer;" class="fab fa-github"
+                        onclick="window.open('','_new').location.href='https://github.com/hurkatsparsh';"></i>
+                </div>
+                <h4 style="font-size:17px;margin-bottom: 5px;font-family: 'Nexa_Free_Bold';">CONTACT ME:</h3>
+                    hurkatsparsh@gmail.com | +91 9769948593
+                    <h4 style="font-size:17px;margin-bottom: 5px;font-family: 'Nexa_Free_Bold';">PREFER A PDF?</h3>
+                        <button onclick="window.open('cv.pdf')" type="submit">Download CV</button>
+
+        </div>
+    </div>
+
+
+    <div class="slideshow-container">
+        <!--EDUCATION-->
+        <div class="mySlides">
+            <div id="instructions">
+                <div id="instructup">
+                    <i class="fa fa-caret-square-o-up"></i><br>Learn More</div>
+                <div id="instructdown">About Me<br>
+                    <i class="fa fa-caret-square-o-down"></i></div>
+                <div id="instructleft">
+                    <i class="fa fa-caret-square-o-left"></i> Left</div>
+                <div id="instructright">Right
+                    <i class="fa fa-caret-square-o-right"></i></div>
+                <br><br>Use Arrow Keys To Navigate<br><br><br><br><br>
+                <p id="mobile">Better Viewed On A Laptop.</p>
+
+            </div>
+            <div class="simg" id="simg1">
+                <i id="mobile" onclick="about()" class="updown fa fa-chevron-down"></i>
+                <div class="shiftup" id="topic">
+                    EDUCATION</div>
+                <div id="edudetails">
+                    "The only true wisdom is in knowing you know nothing." -Socrates<br>
+                </div>
+                <div id="dots">
+                    <i id="mobile" onclick="plusSlides(-1)" class="fa fa-chevron-left">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                    <span onclick="currentSlide(1)" class="dot"></span>
+                    <span onclick="currentSlide(2)" class="dot"></span>
+                    <span onclick="currentSlide(3)" class="dot"></span>
+                    <span onclick="currentSlide(4)" class="dot"></span>
+                    <span onclick="currentSlide(5)" class="dot"></span>
+                    <span onclick="currentSlide(6)" class="dot"></span>
+                    <span onclick="currentSlide(7)" class="dot"></span><span id="mobile">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <i id="mobile" onclick="plusSlides(1)" class="fa fa-chevron-right"></i>
+
+                </div>
+                <i id="mobile" onclick="moreinfo()" class="bottomup fa fa-chevron-up"></i>
+
+
+            </div>
+            <div class="down fadeup">
+                <div id="frontend">
+                    Arya Vidya Mandir, Bandra(West),<br>
+                    Mumbai - 400050.<br>
+                    2004 - 2016<br>
+                    Xth passsed from ICSE - 90.17%
+                    <hr>
+                    PACE, Junior Science College, Dadar(West),<br>Mumbai - 400028.<br>
+                    2016 - 2018<br>
+                    XIIth passsed from HSC - 82.77%
+                </div>
+                <img src="education.png" class="fadeupimg" id="eduimg" alt="Education">
+
+                <div id="backend">
+                    <br><br>
+                    <hr id="mobile"><br>
+                    B.Tech. in Electronics & Communication Eng.<br>with Spec. in Sensors And Wearable
+                    Tech,<br>
+                    VIT Vellore - 632014, Tamil Nadu<br>
+                    2018 - Present<br>
+                    CGPA - 8.05
+                </div>
+            </div>
+
+        </div>
+
+        <!--TECHNICAL SKILLS-->
+        <div class="mySlides">
+            <div class="simg" id="simg2">
+                <i id="mobile" onclick="about()" class="updown fa fa-chevron-down"></i>
+                <div class="shiftup" id="topic">
+                    TECHNICAL SKILLS
+                </div>
+                <div id="edudetails">
+                    "Talent is cheaper than table salt. What separates the talented individual<br>from the successful one is a lot of hard
+                    work."
+                    - Stephen King<br>
+                </div>
+                <div id="dots">
+                    <i id="mobile" onclick="plusSlides(-1)" class="fa fa-chevron-left">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                    <span onclick="currentSlide(1)" class="dot"></span>
+                    <span onclick="currentSlide(2)" class="dot"></span>
+                    <span onclick="currentSlide(3)" class="dot"></span>
+                    <span onclick="currentSlide(4)" class="dot"></span>
+                    <span onclick="currentSlide(5)" class="dot"></span>
+                    <span onclick="currentSlide(6)" class="dot"></span>
+                    <span onclick="currentSlide(7)" class="dot"></span><span id="mobile">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <i id="mobile" onclick="plusSlides(1)" class="fa fa-chevron-right"></i>
+                </div>
+                <i id="mobile" onclick="moreinfo()" class="bottomup fa fa-chevron-up"></i>
+            </div>
+            <div class="down fadeup">
+                <div class="leftpara">
+                    <ul>
+                        <li> Write efficient codes (Software - Keil uVision5) and interface hardware with 8051
+                            microcontrollers</li>
+                        <li> Design, Create and Deploy IOT Devices using Arduino & Raspberry Pi platforms</li>
+                        <li> Design, Simulate and Examine simple circuits with Transistors, Amplifiers, Oscillators etc.
+                            using Multisim</li>
+                        <li> Development of Various Analog Communication Systems using Labview</li>
+                    </ul>
+                    <!--I Have Had Many Amazing Opportunities To Participate
+                    In Hackathons, Workshops And Courses Taught
+                    By Industrial Experts Where I Got Hands-on Experience
+                    In Operating Microcontrollers, IC's And Other Processing
+                    Boards.<br>
+                    I Gained Practical Knowledge Of Sensors & Actuators
+                    As Well As Implemented Data Science & Machine Learning.-->
+                </div>
+                <img src="tech.png" class="fadeupimg" id="techimg" alt="technical">
+                <div class="rightpara">
+                    <ul>
+                        <li> Design of Combinational & Sequential Digital Circuits using
+                            Hardware Description Language (HDL); Implementation on Altera FPGA Development Board
+                        </li>
+                        <li> Implementation of Data Science and Machine Learning using Alteryx Software</li><br><br><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--PROGRAMMING LANGUAGES AND TOOLS-->
+        <div class="mySlides">
+            <div class="simg" id="simg3">
+                <i id="mobile" onclick="about()" class="updown fa fa-chevron-down"></i>
+                <div class="shiftup" id="topic">
+                    SOFTWARE & TOOLS
+                </div>
+                <div id="edudetails">"Talk is cheap. Show me the code."
+                - Linus Torvalds
+                    <br>
+                </div>
+                <div id="dots">
+                    <i id="mobile" onclick="plusSlides(-1)" class="fa fa-chevron-left">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                    <span onclick="currentSlide(1)" class="dot"></span>
+                    <span onclick="currentSlide(2)" class="dot"></span>
+                    <span onclick="currentSlide(3)" class="dot"></span>
+                    <span onclick="currentSlide(4)" class="dot"></span>
+                    <span onclick="currentSlide(5)" class="dot"></span>
+                    <span onclick="currentSlide(6)" class="dot"></span>
+                    <span onclick="currentSlide(7)" class="dot"></span><span id="mobile">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <i id="mobile" onclick="plusSlides(1)" class="fa fa-chevron-right"></i>
+                </div>
+                <i id="mobile" onclick="moreinfo()" class="bottomup fa fa-chevron-up"></i>
+            </div>
+            <div class="down fadeup">
+                <div class="leftpara">
+                    <ul>
+                        <li> Expertise in Essential Skills in Problem Solving, Object Oriented Programming Machine
+                            Learning and AI
+                            using Python</li>
+                        <li> Real Time Applications using Object Oriented Programming features and Problem Solving in C
+                            and C++</li>
+                        <li> Fundamentals of Object Oriented Programming in Java using BlueJ Development Environment
+                        </li>
+
+                    </ul>
+                </div>
+                <img src="code.png" class="fadeupimg1" id="langimg" alt="Coding">
+                <div class="rightpara">
+                    <ul>
+                        <li> Matrix Manipulations, Data Visualizations, Functions and Mathematical Computations using
+                            MATLAB
+                            & R</li>
+                        <li> Graphic Design using Photoshop</li>
+                        <li> Basic 3D Modelling using Blender</li><br><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--WEB DEVELOPMENT-->
+        <div class="mySlides">
+            <div class="simg" id="simg4">
+                <i id="mobile" onclick="about()" class="updown fa fa-chevron-down"></i>
+                <div class="shiftup" id="topic">
+                    WEB DEV</div>
+                <div id="edudetails">
+                    "Ruby is rubbish! PHP is phpantastic!" - Nikita Popov<br>
+                </div>
+                <div id="dots">
+                    <i id="mobile" onclick="plusSlides(-1)" class="fa fa-chevron-left">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                    <span onclick="currentSlide(1)" class="dot"></span>
+                    <span onclick="currentSlide(2)" class="dot"></span>
+                    <span onclick="currentSlide(3)" class="dot"></span>
+                    <span onclick="currentSlide(4)" class="dot"></span>
+                    <span onclick="currentSlide(5)" class="dot"></span>
+                    <span onclick="currentSlide(6)" class="dot"></span>
+                    <span onclick="currentSlide(7)" class="dot"></span><span id="mobile">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <i id="mobile" onclick="plusSlides(1)" class="fa fa-chevron-right"></i>
+                </div>
+                <i id="mobile" onclick="moreinfo()" class="bottomup fa fa-chevron-up"></i>
+            </div>
+            <div class="down fadeup">
+                <div id="frontend">
+                    <div style="display: inline-block;">
+                        Being multi disciplined is a big part of my ethos. Whether its design, development or UI/UX.
+                        In the last 3 years I have learnt & mastered various
+                        elements of web technologies. I implemented
+                        these skills to design & develop many websites, a few of them being :
+                        <ul>
+                            <li> This Website Right Here !!</li>
+                            <li> An E-Commerce website <a style="color:blue;" href="https://www.thegiftangels.in"
+                                    target="_blank">www.thegiftangels.in</a></li>
+                            <li> A Courier Management System for booking & tracking couriers.</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="web.png" class="fadeupimg" id="webimg" alt="Web Development" />
+                <div id="backend1">
+                    <div style="display: inline-block;">
+                        Frontend<br><br>
+                        <div class="fendbox">HTML5</div><br>
+                        <div class="fendbox">CSS</div><br>
+                        <div class="fendbox">Javascript</div><br><br>
+                        Backend<br><br>
+                        <div class="fendbox">PHP</div><br>
+                        <div class="fendbox">Java</div><br>
+                        <div class="fendbox">MySQL</div>
+                    </div>
+                    <div class="stars">
+                        <br><br><br>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <br><br><br>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <br><br><br>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star"></span>
+                        <br><br><br><br><br><br>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star"></span>
+                        <span id="fa" class="fa fa-star"></span>
+                        <br><br><br>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star"></span>
+                        <span id="fa" class="fa fa-star"></span>
+                        <br><br><br>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star checked"></span>
+                        <span id="fa" class="fa fa-star"></span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--PROJECTS-->
+        <div class="mySlides">
+            <div class="simg" id="simg5">
+                <i id="mobile" onclick="about()" class="updown fa fa-chevron-down"></i>
+                <div class="shiftup" id="topic">
+                    PROJECTS
+                </div>
+                <div id="edudetails">
+                    "You can do anything you set your mind to."
+                    - Benjamin Franklin<br>
+                </div>
+                <div id="dots">
+                    <i id="mobile" onclick="plusSlides(-1)" class="fa fa-chevron-left">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                    <span onclick="currentSlide(1)" class="dot"></span>
+                    <span onclick="currentSlide(2)" class="dot"></span>
+                    <span onclick="currentSlide(3)" class="dot"></span>
+                    <span onclick="currentSlide(4)" class="dot"></span>
+                    <span onclick="currentSlide(5)" class="dot"></span>
+                    <span onclick="currentSlide(6)" class="dot"></span>
+                    <span onclick="currentSlide(7)" class="dot"></span><span id="mobile">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <i id="mobile" onclick="plusSlides(1)" class="fa fa-chevron-right"></i>
+                </div>
+                <i id="mobile" onclick="moreinfo()" class="bottomup fa fa-chevron-up"></i>
+            </div>
+            <div class="down fadeup">
+                <div class="leftpara" id="projectsleft">
+                    <ul>
+                        <li> (Feb 2019) Design, Development and SEO of this Website.
+                        </li>
+                        <li> (Aug 2019 - Oct 2019) A Courier Management System capable of booking & tracking couriers.
+                        </li>
+                        <li> (July 2019 - Oct 2019) Obstructive Sleep Apnea detection using the EEG signal,
+                            based on a significant
+                            filtering and classification approach.</li>
+                        <li> (May 2019) An E-Commerce website that sells Home Décor, Crockery, Envelopes
+                            <a style="color: blue;" href="https://www.thegiftangels.in"
+                                target="_blank">www.thegiftangels.in</a></li>
+                    </ul>
+                </div>
+                <img src="project.png" class="fadeupimg" id="projectimg" alt="projects">
+                <div class="rightpara" id="projectsright">
+                    <div style="display: inline-block;">
+                        <ul>
+                            <li> (Jan 2019 - Apr 2019) A secure Automated Election System with Blockchain and IOT for
+                                Smart
+                                India
+                                Hackathon.
+                            </li>
+                            <li> (Jan 2019 - Apr 2019) A Posture Correction Wearable Device which reminds the User to
+                                Correct his Posture.
+                            </li>
+                            <li> (Dec 2018 - Apr 2019) A Website and Mobile App that records instructions given
+                                by
+                                the
+                                doctor and converts it into an audio QR code and also displays the patient’s medical
+                                history.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--EXTRA-CURRICULAR-->
+        <div class="mySlides">
+            <div class="simg" id="simg6">
+                <i id="mobile" onclick="about()" class="updown fa fa-chevron-down"></i>
+                <div class="shiftup" id="topic">
+                    WHAT I DO IN MY FREE TIME
+                </div>
+                <div id="edudetails">
+                    EXTRA-CURRICULAR ACTIVITIES, INTERESTS AND HOBBBIES.<br>
+                </div>
+                <div id="dots">
+                    <i id="mobile" onclick="plusSlides(-1)" class="fa fa-chevron-left">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                    <span onclick="currentSlide(1)" class="dot"></span>
+                    <span onclick="currentSlide(2)" class="dot"></span>
+                    <span onclick="currentSlide(3)" class="dot"></span>
+                    <span onclick="currentSlide(4)" class="dot"></span>
+                    <span onclick="currentSlide(5)" class="dot"></span>
+                    <span onclick="currentSlide(6)" class="dot"></span>
+                    <span onclick="currentSlide(7)" class="dot"></span><span id="mobile">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <i id="mobile" onclick="plusSlides(1)" class="fa fa-chevron-right"></i>
+                </div>
+                <i id="mobile" onclick="moreinfo()" class="bottomup fa fa-chevron-up"></i>
+            </div>
+            <div class="down fadeup">
+                <div class="leftpara" id="projectsleft">
+                    Additional Activities :
+                    <ul>
+                        <li> Youth Red Cross Society (December 2019 - Present)</li>
+                        <li> Art - Drawing Elementary (2011) & Intermediate (2012) Exam</li>
+                        <li> Trained in Abacus - Till Level 6</li>
+                        <li> RoboCamp Sr.</li>
+                    </ul>
+                </div>
+                <img src="interests.png" class="fadeupimg" id="interestimg" alt="interests">
+                <div class="rightpara" id="projectsright">
+                    Interests :
+                    <ul>
+                        <li>Badminton</li>
+                        <li>Drawing & Painting</li>
+                        <li>Football</li>
+                        <li>Basketball</li>
+                        <li>Music</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--INTERESTED-->
+        <div class="mySlides">
+            <div class="simg" id="simg7">
+                <i id="mobile" onclick="about()" class="updown fa fa-chevron-down"></i>
+                <div class="shiftup" id="topic">
+                    INTERESTED?</div>
+                <div id="edudetails">
+                    I LOVE TO COLLABORATE, I AM CURRENTLY LOOKING FOR OTHER CREATIVE MINDS TO WORK, GROW
+                    AND NETWORK.
+                    IF YOU'VE GOT AN EXCITING PROJECT YOU
+                    WISH TO WORK ON TOGETHER, GET IN TOUCH!<br>
+                </div>
+                <div id="dots">
+                    <i id="mobile" onclick="plusSlides(-1)" class="fa fa-chevron-left">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                    <span onclick="currentSlide(1)" class="dot"></span>
+                    <span onclick="currentSlide(2)" class="dot"></span>
+                    <span onclick="currentSlide(3)" class="dot"></span>
+                    <span onclick="currentSlide(4)" class="dot"></span>
+                    <span onclick="currentSlide(5)" class="dot"></span>
+                    <span onclick="currentSlide(6)" class="dot"></span>
+                    <span onclick="currentSlide(7)" class="dot"></span><span id="mobile">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <i id="mobile" onclick="plusSlides(1)" class="fa fa-chevron-right"></i>
+                </div>
+                <i id="mobile" onclick="moreinfo()" class="bottomup fa fa-chevron-up"></i>
+            </div>
+            <div class="down fadeup">
+                <div class="leftpara">
+                    What I am looking for in a Job?<br>
+                    <ul>
+                        <li> To gain knowledge and experience in application of software engineering machine learning &
+                            data science.</li>
+                        <li> To develop new software & hardware technical skills.</li>
+                        <li> To develop non-technical skills like management, leadership, teamwork etc.</li>
+
+                    </ul>
+                </div>
+                <img src="feedback.png" class="fadeupimg" id="intimg" alt="Education">
+                <div class="rightpara">
+                    If you'd like to make an enquiry, please feel free
+                    to get in touch, and I will respond as soon as possible.
+
+                    <div style="display: inline-block;line-height: 15px;">
+
+                        <form method="post" action="feedback.php">
+                            <input type="text" placeholder="Name..." name="name" id="user" required /><br><br>
+                            <input type="email" placeholder="Email..." name="email" id="email" required /><br><br>
+                            <input type="text" placeholder="Message..." name="message" id="feedback" required /><br><br>
+                            <input id="feedbacksubmit" type="submit" />
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--ARROW KEYS-->
+        <div id="arrows">
+            <i id="upkey" onclick="moreinfo()" class="arrowkeys fa fa-caret-square-o-up"></i>
+            <i onclick="plusSlides(-1)" id="spread" class="arrowkeys fa fa-caret-square-o-left"></i>
+            <i onclick="about()" class="arrowkeys fa fa-caret-square-o-down"></i>
+            <i onclick="plusSlides(1)" class="arrowkeys fa fa-caret-square-o-right"></i>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

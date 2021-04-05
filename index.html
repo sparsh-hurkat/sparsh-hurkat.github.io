@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<script>
+
+		window.addEventListener('load', function () {
+
+			var touchsurface = document.getElementById('touchsurface'),
+				startX,
+				startY,
+				dist,
+				threshold = 100, //required min distance traveled to be considered swipe
+				allowedTime = 200, // maximum time allowed to travel that distance
+				elapsedTime,
+				startTime
+
+			touchsurface.addEventListener('touchstart', function (e) {
+				touchsurface.innerHTML = ''
+				var touchobj = e.changedTouches[0]
+				dist = 0
+				startX = touchobj.pageX
+				startY = touchobj.pageY
+				startTime = new Date().getTime() // record time when finger first makes contact with surface
+				e.preventDefault()
+			}, false)
+
+			touchsurface.addEventListener('touchmove', function (e) {
+				e.preventDefault() // prevent scrolling when inside DIV
+			}, false)
+
+			touchsurface.addEventListener('touchend', function (e) {
+				var touchobj = e.changedTouches[0]
+				distup = startY - touchobj.pageY
+				distdown = touchobj.pageY - startY  // get total dist traveled by finger while in contact with surface
+				elapsedTime = new Date().getTime() - startTime // get time elapsed
+				// check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
+				if (elapsedTime <= allowedTime && distdown >= threshold && Math.abs(touchobj.pageX - startX) <= 100)
+					touchsurface.innerHTML = 'Congrats, you\'ve made a <span style="color:red">down swipe!</span>'
+				if (elapsedTime <= allowedTime && distup >= threshold && Math.abs(touchobj.pageX - startX) <= 100)
+					touchsurface.innerHTML = 'Congrats, you\'ve made a <span style="color:red">up swipe!</span>'
+				e.preventDefault()
+			}, false)
+
+		}, false) // end window.onload
+	</script>
+
+	<div style="height:200px;width:200px;background-color: aqua;" id="touchsurface">Swipe Me</div>
+
+</body>
+
+</html>
